@@ -1,0 +1,419 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>contect.com</title>
+	<marquee>Welcome To My Portfilio </marquee> 
+	<link rel="stylesheet" href="style.css">
+	    <script
+      src="https://kit.fontawesome.com/66aa7c98b3.js"
+      crossorigin="anonymous"></script>
+      	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<div class="container">
+<div class="card">
+      <div class="img-bx">
+        <img src="C:\Users\windows 10\Downloads\WhatsApp Image 2024-10-08 at 6.40.26 PM.jpeg" alt="img" />
+      </div>
+      <div class="content">
+        <div class="detail">
+          <h2>Kuldeep Yadav <br /><span>Full Stack Web Developer</span></h2>
+          <ul class="sci">
+            <li>
+              <a href="tel:+919617054795"><i class="fa-solid fa-phone-volume"></i></a>
+            </li>
+            <li>
+              <a href="kuldeepyadav96170@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </li>
+            <li>
+              <a href="https://wa.me/919617054795" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/kuldeep_yada525/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+
+<h1 style="text-align: center;margin-bottom: 20px;">Google Map</h1>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.2006286577293!2d75.85223387393309!3d22.720783127525593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd0af4e987cf%3A0xa5f467c76295d4d0!2s50%2C%20Imli%20Bazar%20Rd%2C%20Rajwada%2C%20Indore%2C%20Madhya%20Pradesh%20452002!5e0!3m2!1sen!2sin!4v1728393273882!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</body>
+</html>
+ -->
+
+
+
+
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kuldeep Yadav portfolio</title>
+  <!-- <link rel="stylesheet" href="./css/animation-classes.css" /> -->
+  <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+  <script src="./js/animation.js" defer></script>
+  <script src="./js/color-mode.js" defer></script>
+  <script src="./js/project-slideshow.js" defer></script>
+  <link rel="stylesheet" href="./css/style1.css" />
+  <link rel="stylesheet" href="./css/animation.css" />
+  <link rel="stylesheet" href="./css/color-mode.css" />
+</head>
+
+<body>
+
+  <div id="cat"></div>
+  <div id="rat"></div>
+
+  <script>
+
+    // Ripple
+    window.addEventListener("click", ev => {
+      let ripple = document.createElement("div")
+      ripple.classList.add("ripple");
+      ripple.style.top = ev.clientY + "px";
+      ripple.style.left = ev.clientX + "px";
+      document.body.appendChild(ripple);
+      ripple.addEventListener("animationend", () => ripple.remove())
+    });
+
+
+    // cat
+
+      const cat = document.getElementById('cat');
+      const runningGif = './assets/cat/running-run.gif';
+      const staticImage = './assets/cat/catani1.png';
+      const moveSound = new Audio('./assets/cat/cat-aud1.mp3');
+
+      document.addEventListener('click', function (event) {
+        const clickX = event.clientX;
+        const clickY = event.clientY;
+
+        const catRect = cat.getBoundingClientRect();
+        const catX = catRect.left + catRect.width / 2;
+        const catY = catRect.top + catRect.height / 2;
+
+        const directionX = clickX - catX;
+        const directionY = clickY - catY;
+
+        const angle = Math.atan2(directionY, directionX);
+        const angleDegrees = angle * (180 / Math.PI);
+
+        moveSound.play();
+
+        cat.style.transform = `translate(-50%, -50%) rotate(${angleDegrees}deg) scaleX(-1)`;
+        cat.style.backgroundImage = `url(${runningGif})`;
+        moveCat(clickX, clickY, angleDegrees);
+      });
+
+      function moveCat(x, y, angleDegrees) {
+        cat.style.left = (x - 50) + 'px';
+        cat.style.top = (y - 50) + 'px';
+
+        setTimeout(() => {
+          cat.style.backgroundImage = `url(${staticImage})`;
+          cat.style.transform = `translate(-50%, -50%) rotate(${angleDegrees}deg) scaleX(-1)`; 
+        }, 1000);
+      }
+
+
+
+  </script>
+
+
+
+  <div id="hero">
+    <h5>Hello I'm</h5>
+    <h1>Kuldeep Yadav</h1>
+    <p>Fullstack Developer</p>
+
+    <div class="im" style="margin-top: 0px;">
+      <img src="C:\Users\windows 10\Desktop\Portfilio\Cognoise-Kuldeep.jpeg" style="height: 200px;border: 2px solid white;">
+    </div>
+
+
+
+
+
+    <!-- Block, Element, Modifier (BEM) naming convention-->
+    <div id="hero__animation">
+      <div id="hero__animation__img"></div>
+    </div>
+  </div>
+  <nav id="grid">
+    <div id="grid__tl">
+      <div id="grid__tl__btn">About</div>
+      <div id="grid__tl__content">
+        <div class="cards">
+
+          <div class="cards__content">
+            <article>
+              <img src="C:\Users\windows 10\Desktop\Portfilio\th.jpeg" alt="Education icon" class="icon" />
+              <h2>Resume</h2>
+              <a href="C:\Users\windows 10\Desktop\assets\Resume (2).pdf" download style="text-decoration: none;">
+                <p class="dwn">Download</p>
+              </a>
+            </article>
+          </div>
+
+          <div class="cards__content">
+            <article>
+              <img src="C:\Users\windows 10\Desktop\Portfilio\experience.png" alt="Experience icon" class="icon" />
+              <h2>Experience</h2>
+              <p>
+                6 Months + <br />
+                Developer <br />
+                Experience
+              </p>
+            </article>
+          
+          </div>
+          <div class="cards__content">
+            <article>
+              <img src="C:\Users\windows 10\Desktop\Portfilio\education.png" alt="Education icon" class="icon" />
+              <h2>Education</h2>
+              <p>B.Tech Computer Science Technology</p>
+              <p>6.55 CGPA </p>
+            </article>
+            
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div id="grid__tr">
+      <div id="grid__tr__btn">Experience</div>
+      <div id="grid__tr__content">
+        <div class="cards experience">
+          <article class="experience__skill">
+
+            <h2>Frontend Development</h2>
+
+
+            <div>
+              <img src="C:\Users\windows 10\Desktop\Portfilio\checkmark.png" alt="Checkmark icon" class="icon" />
+              <div>
+                <h2>C</h2>
+                <p>Intermediate</p>
+              </div>
+            </div>
+
+            <div>
+              <img src="C:\Users\windows 10\Desktop\Portfilio\checkmark.png" alt="Checkmark icon" class="icon" />
+              <div>
+                <h2>C++</h2>
+                <p>Intermediate</p>
+              </div>
+            </div>
+
+            <div>
+              <img src="C:\Users\windows 10\Desktop\Portfilio\checkmark.png" alt="Checkmark icon" class="icon" />
+              <div>
+                <h2>HTML-CSS</h2>
+                <p>Experienced</p>
+              </div>
+            </div>
+
+            <div>
+              <img src="C:\Users\windows 10\Desktop\Portfilio\checkmark.png" alt="Checkmark icon" class="icon" />
+              <div>
+                <h2>JavaScript</h2>
+                <p>Experienced</p>
+              </div>
+            </div>
+
+            <div>
+              <img src="C:\Users\windows 10\Desktop\Portfilio\checkmark.png" alt="Checkmark icon" class="icon" />
+              <div>
+                <h2>React JS</h2>
+                <p>Intermediate</p>
+              </div>
+            </div>
+
+
+
+
+
+          </article>
+
+          <article class="experience__skill">
+
+            <h2>Backend Development</h2>
+
+            <div>
+              <img src="C:\Users\windows 10\Desktop\Portfilio\checkmark.png" alt="Checkmark icon" class="icon" />
+              <div>
+                <h2>MongoDB</h2>
+                <p>Intermediate</p>
+              </div>
+            </div>
+
+            <div>
+              <img src="C:\Users\windows 10\Desktop\Portfilio\checkmark.png" alt="Checkmark icon" class="icon" />
+              <div>
+                <h2>MySQL</h2>
+                <p>Intermediate</p>
+              </div>
+            </div>
+
+            <div>
+              <img src="C:\Users\windows 10\Desktop\Portfilio\checkmark.png" alt="Checkmark icon" class="icon" />
+              <div>
+                <h2>NodeJS</h2>
+                <p>Experienced</p>
+              </div>
+            </div>
+
+            <div>
+              <img src="C:\Users\windows 10\Desktop\Portfilio\checkmark.png" alt="Checkmark icon" class="icon" />
+              <div>
+                <h2>Express JS</h2>
+                <p>Basic</p>
+              </div>
+            </div>
+
+            <div>
+              <img src="C:\Users\windows 10\Desktop\Portfilio\checkmark.png" alt="Checkmark icon" class="icon" />
+              <div>
+                <h2>GitHub</h2>
+                <p>Basic</p>
+              </div>
+            </div>
+
+
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div id="grid__bl">
+      <div id="grid__bl__btn">Projects</div>
+      <div id="grid__bl__content">
+        <div id="grid__bl__content__projects">
+
+          <div class="project p-1">
+            <img class="project__img project-1" src="https://img.freepik.com/premium-vector/bus-logo-design-vector-travel-bus-logo_293731-683.jpg?semt=ais_hybrid" alt="Project 1" />
+            <h2 class="project__title">Charted</h2>
+            <button class="btn" onclick="window.location.href='https://glowing-manatee-ea6688.netlify.app/'">
+              Demo
+            </button>
+            <button class="btn" onclick="window.location.href='https://github.com/Kuldeep910787/Charted'">
+              GitHub
+            </button>
+          </div>
+
+
+
+
+
+
+
+          <div class="project p-2">
+            <img class="project__img project-2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy8L1HIH2ZlhTcSR2x5c993GIA6DFFs06YEg&s" alt="Project 2" />
+            <h2 class="project__title"></h2>
+            <h2 class="project__title">Amazon</h2>
+            <button class="btn" onclick="window.location.href=''">
+              Demo
+            </button>
+            <button class="btn" onclick="window.location.href='https://github.com/Kuldeep910787/Amazon-Clone'">
+              GitHub
+            </button>
+          </div>
+
+
+
+
+          <div class="project p-3">
+            <img class="project__img project-3" src="https://logos-world.net/wp-content/uploads/2020/05/Facebook-Logo-2019.png" alt="Project 3" />
+            <h2 class="project__title">Facebook</h2>
+
+            <button class="btn"
+              onclick="window.location.href=''">
+              Demo
+            </button>
+            <button class="btn"
+              onclick="window.location.href='https://github.com/Kuldeep910787/Facebook'">
+              GitHub
+            </button>
+          </div>
+
+
+
+          <div class="project p-3">
+            <img class="project__img project-3" src="https://img.freepik.com/free-vector/youtube-player-icon-with-flat-design_23-2147837753.jpg" alt="Project 3" />
+            <h2 class="project__title">Youtube-Clone</h2>
+
+            <button class="btn" onclick="window.location.href=''">
+              Demo
+            </button>
+            <button class="btn" onclick="window.location.href='https://github.com/Kuldeep910787/Youtube-Clone-'">
+              GitHub
+            </button>
+          </div>
+
+
+
+          <!-- <div class="project p-3">
+            <img class="project__img project-3" src="assets/portfolio-projects/sign.png" alt="Project 3" />
+            <h2 class="project__title">Sign Scraper</h2>
+
+            <button class="btn" onclick="window.location.href='https://signscraper.netlify.app/'">
+              Demo
+            </button>
+            <button class="btn" onclick="window.location.href='https://github.com/BHAVISHEK1/mini_projects'">
+              GitHub
+            </button>
+          </div> -->
+
+          <button class="arrow" onclick="navigateProject(-1)">
+            &#10094;
+          </button>
+          <button class="arrow" onclick="navigateProject(1)">&#10095;</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="grid__br">
+      <div id="grid__br__btn">Contact</div>
+      <div id="grid__br__content">
+        <h5 class="contact-text">Get In Touch</h5>
+        <h2 class="contact-text">Contact Me</h2>
+        <div>
+          <button style="border: 4px solid red;" class="btn btn-contact"
+            onclick="window.location.href='https://mailto:kuldeepyadav96170@gmail.com'">
+            Email
+          </button>
+          <button style="border: 4px solid rgb(65, 125, 237);" class="btn btn-contact"
+            onclick="window.location.href='https://www.linkedin.com/in/kuldeep-yadav-589a322a0/'">
+            LinkedIn
+          </button>
+          <button style="border: 4px solid rgb(18, 192, 119);" class="btn btn-contact"
+            onclick="window.location.href='https://api.whatsapp.com/send?phone=919617054795'">
+            WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div id="color-mode" style="background-color: rgb(93, 93, 93);">
+    <div id="toggle-button" class="icon" style="background-color: white; border-radius: 50px;">
+
+    </div>
+  </div>
+</body>
+
+</html>
